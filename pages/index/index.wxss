@@ -1,1 +1,25 @@
 /* pages/index/index.wxss */
+/* swiper组件可以直接做选择器  */
+swiper,swiper image{
+  height: 380rpx;
+  width: 100%;
+}
+.flex{
+  display: flex ;
+  justify-content: space-around;
+  align-items: baseline ;
+  text-align: center;
+  text-indent: 50rpx;
+}
+.menu{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40rpx;
+}
+.menu .item{
+  padding : 10rpx 20rpx;
+  border: 2rpx solid grey ;
+}
+.menu .active{
+  background-color: blue;
+}

@@ -1,0 +1,3 @@
+<!--components/common/mycom.wxml-->
+<text>components/common/mycom.wxml</text>
+<view>我是子组件</view>

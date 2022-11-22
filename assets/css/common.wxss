@@ -1,0 +1,36 @@
+/* 指定css文件的编码格式 */
+@charset "utf-8";
+/* 常用公共类 */
+.f-l{
+    float: left;
+}
+.f-r{
+    float:right;
+}
+.border1{
+    border: 1px solid red ;
+}
+.bgred{
+    background: red;
+}
+/* 元素居中 */
+.center-block{
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* 文本居中 */
+.center-text{
+    text-align: center;
+}
+.w1200{
+    width: 1200px;
+}
+.h100{
+    height: 100%;
+}
+/* 移除元素 */
+.hide,
+.none {
+    display: none;
+}

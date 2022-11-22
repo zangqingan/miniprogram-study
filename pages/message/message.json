@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "mycom":"../../components/mycom/mycom"
+  }
+  
+}

@@ -1,3 +1,46 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
-<button>按钮</button>
+<!-- 轮播器 -->
+<swiper interval="{{1500}}" indicator-dots autoplay circular indicator-active-color="red">  
+  <swiper-item>
+    <image src="https://p1.music.126.net/GXPbeBLIbYnAoq2TJRsMxg==/109951165524391203.jpg?imageView&quality=89"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://p1.music.126.net/9Ed0rFxdZg3mYQ6SwUC7Bw==/109951165526254279.jpg?imageView&quality=89"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://p1.music.126.net/0LKEaXuGCQ4H80Fu-uFpJw==/109951165526307467.jpg?imageView&quality=89"></image>
+  </swiper-item>
+</swiper>
+<!-- 循环 -->
+<view >
+  <view wx:for="{{list}}" wx:key="item" class="flex">
+      <view>{{index}}-{{item}}</view> 
+      <button data-i="{{index}}" bindtap="del">删除</button>
+  </view>
+</view>
+<!-- 判断 -->
+<view wx:if="{{showType}}">
+    isShow
+</view>
+<view wx:else>
+    isHide
+</view>
+<button  bindtap="toggle">切换显示隐藏</button>
+<!-- 绑定事件 -->
+<button bindtap="login">登录</button>
+<!-- 循环 -->
+<view class="menu">
+  <view data-i="{{index}}" bindtap="selectMenu" wx:for="{{menu}}"  wx:key="item" class="item {{activeIndex === index?'active':''}}">
+      <view>{{item}}</view> 
+  </view>
+</view>
+<view wx:for="{{classArr}}" wx:key="id">
+  {{item.classFS}}共有<text wx:for="{{item.students}}" wx:key="index" wx:for-item="student">{{student}}-</text>共{{item.students.length}}名学生
+</view>
+<!-- 页面跳转 -->
+<navigator url="../detail/detail">详情页</navigator>
+<button bindtap="godetail">跳转到详情页</button>
+
+<!-- 数据双向绑定 -->
+<input type="text" value="{{invalue}}" bindinput="vmodel"/>
+<view>{{invalue}}</view>

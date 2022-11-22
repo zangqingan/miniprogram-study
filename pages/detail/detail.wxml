@@ -1,0 +1,6 @@
+<!--pages/detail/detail.wxml-->
+<view>
+  <view wx:for="{{list}}" wx:key="index">
+    {{item.order_no}}
+  </view>
+</view>

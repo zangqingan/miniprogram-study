@@ -1,4 +1,6 @@
 /**app.wxss**/
+/* 引入外部样式表 */
+@import './assets/css/common.wxss';
 .container {
   height: 100%;
   display: flex;

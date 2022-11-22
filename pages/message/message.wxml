@@ -1,0 +1,22 @@
+<!--pages/message/message.wxml-->
+<text>pages/message/message.wxml</text>
+<view>改变data中的字符数据：{{text}}</view>
+<button bindtap="changeText"> Change normal data </button>
+
+<view>改变data中的数字数据：{{num}}</view>
+<button bindtap="changeNum"> Change normal num </button>
+
+<view>改变数组对象：{{array[0].text}}</view>
+<button bindtap="changeItemInArray"> Change Array data </button>
+
+<view>改变对象：{{object.text}}</view>
+<button bindtap="changeItemInObject"> Change Object data </button>
+
+<view>{{newField.text}}</view>
+<button bindtap="addNewField"> Add new data </button>
+
+<view wx:if="{{view == 'WEBVIEW'}}"> WEBVIEW </view>
+<view wx:elif="{{view == 'APP'}}"> APP </view>
+<view wx:else="{{view == 'MINA'}}"> MINA </view>
+
+<mycom></mycom>
